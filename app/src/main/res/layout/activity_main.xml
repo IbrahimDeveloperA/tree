@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_brown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/brown"
+                app:cardBackgroundColor="@color/brown"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="@color/green_white"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/green_white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingVertical="12dp"
+                            android:text="3 месяца по цене 1"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="-8dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/leaf_4"
+            app:layout_constraintEnd_toEndOf="@id/const_brown"
+            app:layout_constraintTop_toTopOf="@id/const_brown" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="-8dp"
+            android:src="@drawable/leaf_3"
+            app:layout_constraintEnd_toEndOf="@id/const_brown"
+            app:layout_constraintTop_toTopOf="@id/const_brown" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="-8dp"
+            android:layout_marginBottom="-2dp"
+            android:src="@drawable/leaf_2"
+            app:layout_constraintBottom_toBottomOf="@id/const_brown"
+            app:layout_constraintStart_toStartOf="@id/const_brown" />
+
+        <ImageView
+            android:id="@+id/img_left_1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="-8dp"
+            android:layout_marginBottom="-12dp"
+            android:src="@drawable/leaf_1"
+            app:layout_constraintBottom_toBottomOf="@id/const_brown"
+            app:layout_constraintStart_toStartOf="@id/const_brown" />
+
+        <ImageView
+            android:id="@+id/img_tree"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.60"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_left_1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Продолжить с ограниченой версией"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_tree"
+            app:layout_constraintStart_toStartOf="@id/img_tree" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_person"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="42dp"
+            android:src="@drawable/ic_person"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_tree" />
+
+        <TextView
+            android:id="@+id/tv_family"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Члены семьи без ограничений"
+            android:textSize="14sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/img_person"
+            app:layout_constraintStart_toEndOf="@id/img_person"
+            app:layout_constraintTop_toBottomOf="@id/img_tree"
+            app:layout_constraintTop_toTopOf="@id/img_person" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_camera"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_camera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_person" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Фото профиля"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_camera"
+            app:layout_constraintStart_toEndOf="@id/img_camera"
+            app:layout_constraintTop_toBottomOf="@id/tv_family"
+            app:layout_constraintTop_toTopOf="@id/img_camera" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_carts"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_cards"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Разные фоны и оформление"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_carts"
+            app:layout_constraintStart_toEndOf="@id/img_carts"
+            app:layout_constraintTop_toTopOf="@id/img_carts" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_nope"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_nope"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_carts" />
+
+        <TextView
+            android:id="@+id/tv_advertisement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Отключение рекламы"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_nope"
+            app:layout_constraintStart_toEndOf="@id/img_nope"
+            app:layout_constraintTop_toTopOf="@id/img_nope" />
+
+        <carbon.widget.TextView
+            android:id="@+id/btn_resume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_resume"
+            app:carbon_elevation="8dp"
+            android:paddingVertical="12dp"
+            android:text="Продолжить с PREMIUM"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:carbon_elevationShadowColor="@color/green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_advertisement" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N сразу за три месяца, далее "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_resume" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
